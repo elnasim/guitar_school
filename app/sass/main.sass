@@ -37,9 +37,333 @@ body
 	overflow-x: hidden
 	opacity: 1
 
+h1
+	margin: 0
+	padding: 0
+	font-family: "RobotoBold", sans-serif
+	font-weight: normal
+	font-size: 70px
+	text-transform: uppercase
+
+h2
+	margin: 0
+	padding: 0
+	font-family: "RobotoBold", sans-serif
+	font-weight: normal
+	font-size: 26px
+	text-transform: uppercase
+	color: $accent
+
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
+
+.header
+	position: relative
+
+.header__topline
+	padding: 20px 0 
+	position: relative
+
+.header__topline__logo
+	margin-left: 13px
+	img
+		margin-right: 12px
+		margin-top: -12px
+	span
+		font-family: "RobotoBlackItalic", sans-serif
+		font-size: 40px
+		color: $accent
+
+.header__topline__skype
+	margin-left: 99px
+	margin-top: 20px
+	border-left: 1px solid #ab987a
+	padding: 5px 0
+	display: inline-block
+	width: 192px
+	text-align: center
+	.fa
+		font-size: 18px
+		color: #ab987a
+		margin-right: 13px
+	span
+		font-family: "LatoRegular", sans-serif
+		font-size: 18px
+
+.header__topline__phone
+	display: inline-block
+	margin-top: 20px
+	border-left: 1px solid #ab987a
+	padding: 5px 0
+	1px solid #143948
+	width: 192px
+	text-align: center
+	.fa
+		font-size: 18px
+		color: #ab987a
+		margin-right: 13px
+	span
+		font-family: "LatoRegular", sans-serif
+		font-size: 18px
+
+.header__topline__socials
+	display: inline-block
+	margin-top: 20px
+	color: $accent
+	font-size: 18px
+	border-left: 1px solid #ab987a
+	border-right: 1px solid #ab987a
+	padding: 5px 0
+	1px solid #143948
+	width: 192px
+	text-align: center
+	a
+		color: $accent
+		margin: 12px
+
+.header__menu
+	background-color: $accent
+
+.header__menu__top-nav
+	ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li
+			padding: 0
+			display: inline-block
+			width: 192px
+			text-align: center
+			border-left: 1px solid #143948
+			&:last-child
+				border-right: 1px solid #143948
+			a
+				color: #fff
+				text-transform: uppercase
+				font-family: "RobotoBold", sans-serif
+				font-size: 18px
+				padding: 32px 0
+				display: block
+				letter-spacing: 1px
+				transition: all .25s ease
+				&:hover
+					text-decoration: none
+					color: #ab987a
+
+.header__content
+	background-image: url(../img/top_bg.jpg)
+	background-size: cover
+	background-position: top center
+	color: #fff
+	padding: 478px 0 78px
+	text-align: right
+	line-height: 1.15
+	span
+		font-size: 70px
+		font-family: "RobotoThin", sans-serif
+		display: block
+		margin-bottom: 40px
+
+//toggle-menu
+.toggle-mnu 
+  display: block
+  width: 28px
+  height: 28px
+  margin-top: 14px
+  position: absolute
+  top: 15px
+  left: 15px
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: $accent
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+
+  &.on span 
+    background-color: transparent
+
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+
+.hidden-menu
+	position: absolute
+	width: 100%
+	background-color: $accent
+	text-align: center
+	display: none
+	ul
+		padding: 0
+		margin: 0
+		li
+			display: block
+			border: none
+			a
+				color: #fff
+				text-transform: uppercase
+				font-family: "RobotoBold", sans-serif
+				font-size: 18px
+				padding: 16px 0
+				display: block
+				letter-spacing: 1px
+				transition: all .25s ease
+				&:hover
+					text-decoration: none
+					background-color: #ab987a
+
+.header__button-down
+	background-image: url(../img/Button-background.png)
+	position: absolute
+	width: 186px
+	height: 41px
+	bottom: -5px
+	left: 50%
+	transform: translate(-50%)
+	cursor: pointer
+
+.s1
+	background-color: #F8F9FB
+	padding: 150px 0
+	position: relative	
+
+.s__head
+	text-align: center
+	position: relative
+	margin-bottom: 76px
+	&::after
+		content: ''
+		position: absolute
+		top: 67px
+		left: 50%
+		transform: translate(-50%)
+		width: 30px
+		height: 2px
+		background-color: #A9987A
+
+.s__text
+	text-align: center
+	margin-bottom: 154px
+	color: $font-color
+
+.s1__content
+	text-align: center
+
+.s1__content__item
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		bottom: -16px
+		left: 50%
+		transform: translate(-50%)
+		width: 30px
+		height: 2px
+		background-color: #A9987A	
+
+.s1__content__item__img-wrapper
+	width: 170px
+	height: 170px
+	border-radius: 100%
+	border: 1px solid #A9987A
+	text-align: center
+	display: inline-block
+	margin-bottom: 30px
+
+.s1__content__item__img
+	margin-top: 30%
+
+.s1__content__item__img_1
+	margin-left: 4px
+
+.s1__content__item__img_2
+	margin-left: 18px
+
+.s1__content__item__img_3
+	margin-left: 4px
+
+.s1__content__item__text
+	display: block
+	font-family: "RobotoBold", sans-serif
+	text-transform: uppercase
+	color: #032f3e
+	font-size: 18px
+
+.s2
+	background-color: $accent
+	color: #fff
+	padding: 30px 0
+
+.s2__left-content
+	padding: 90px 0
+
+.s2__left-content__h1
+	font-size: 70px
+	font-family: "RobotoBold", sans-serif
+	text-transform: uppercase
+	display: block
+	line-height: 1
+
+.s2__left-content__h2
+	font-size: 70px
+	font-family: "RobotoThin", sans-serif
+	text-transform: uppercase
+	display: block
+
+.s2__left-content__list
+	ul
+		list-style-type: none
+		margin-left: 20px
+		padding: 0
+		margin-bottom: 0
+		li
+			margin-bottom: 90px
+			font-family: "RobotoBold", sans-serif
+			font-size: 18px
+			text-transform: uppercase
+			position: relative
+			img
+				margin-right: 36px
+			&::after
+				content: ''
+				background-color: #D5D5D5
+				width: 1px
+				height: 60px
+				position: absolute
+				top: 74px
+				left: 21px
+			&:last-child::after
+				width: 0
+				height: 0
+			&:last-child
+				margin-bottom: 0
+				img
+					margin-left: 11px
+
+.s2__left-content__img, .s2__left-content__text
+	display: table-cell
+	vertical-align: middle
+
+
 
 @import "media" // Всегда в конце
